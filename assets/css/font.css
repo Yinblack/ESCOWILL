@@ -1,0 +1,120 @@
+@font-face
+{
+    font-family: 'MyriadPro';
+    font-weight: 400;
+    font-style: normal;
+    src: url('fonts/MyriadPro-Regular.ttf') format('truetype');
+}
+@font-face
+{
+    font-family: 'MyriadPro';
+    font-weight: 500;
+    font-style: normal;
+    src: url('fonts/MyriadPro-Semibold.ttf') format('truetype');
+}
+@font-face
+{
+    font-family: 'MyriadPro';
+    font-weight: 700;
+    font-style: normal;
+    src: url('fonts/MyriadPro-Bold.ttf') format('truetype');
+}
+
+body p,
+body span,
+body label,
+body{
+    font-family: 'MyriadPro';
+    font-size: 16px;
+    font-weight: 400;
+    color: #808080;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none !important;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+h1,h2,h3,h4,h5{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+p.thin,label.thin,a.thin,span.thin,h1.thin,h2.thin,h3.thin,h4.thin,h5.thin,a.thin,button.thin,li.thin
+{
+    font-weight: 100;
+}
+p.light,label.light,a.light,span.light,h1.light,h2.light,h3.light,h4.light,h5.light,a.light,button.light,li.light
+{
+    font-weight: 300;
+}
+p.regular,label.regular,a.regular,span.regular,h1.regular,h2.regular,h3.regular,h4.regular,h5.regular,a.regular,button.regular,li.regular
+{
+    font-weight: 400;
+}
+p.semi-bold,label.semi-bold,a.semi-bold,span.semi-bold,h1.semi-bold,h2.semi-bold,h3.semi-bold,h4.semi-bold,h5.semi-bold,a.semi-bold,button.semi-bold,li.semi-bold
+{
+    font-weight: 500;
+}
+p.bold,label.bold,a.bold,span.bold,h1.bold,h2.bold,h3.bold,h4.bold,h5.bold,a.bold,button.bold,li.bold
+{
+    font-weight: 700;
+}
+p.extra-bold,label.extra-bold,a.extra-bold,span.extra-bold,h1.extra-bold,h2.extra-bold,h3.extra-bold,h4.extra-bold,h5.extra-bold,a.extra-bold,button.extra-bold,li.extra-bold
+{
+    font-weight: 900;
+}
+
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 25px;
+}
+h3{
+    font-size: 22px;
+}
+h4{
+    font-size: 18px;
+}
+h5{
+    font-size: 15px;
+}
+
+.textWhite{
+    color: #fff;
+}
+.textBlue{
+    color: #777fa0;
+}
+.textPurpple{
+    color: #a7b5f2;
+}
+.textPurppleDark{
+    color: #7764a0;
+}
+
+@media (max-width : 1200px) {
+
+}
+
+@media (max-width : 991px) {
+
+}
+
+@media (max-width : 768px) {
+
+}
+
+@media (max-width : 480px) {
+    h1, h2, h3, h4, h5, p, span, label{
+        width: 100%;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width : 400px) {
+
+}

@@ -1,0 +1,893 @@
+/*MAQUETACION GRALS*/
+a.btnStyle1{
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #ff8f0f;
+    padding: 5px 15px;
+}
+a.btnStyle1>span{
+  display: inline-block;
+  position: relative;
+  float: left;
+    color: #ff8f0f;
+    font-weight: 500;
+    -webkit-transition: color .25s ease;
+       -moz-transition: color .25s ease;
+        -ms-transition: color .25s ease;
+         -o-transition: color .25s ease;
+            transition: color .25s ease;
+}
+a.btnStyle1:hover>span{
+  color: #FFFFFF;
+}
+a.btnStyle1>div{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 0;
+  background-color: #ff8f0f;
+  -webkit-transition: width .25s ease;
+     -moz-transition: width .25s ease;
+      -ms-transition: width .25s ease;
+       -o-transition: width .25s ease;
+          transition: width .25s ease;
+}
+a.btnStyle1:hover>div{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff8f0f;
+}
+section#Breadcrumb{
+  background-color: #f6f3ff;
+}
+section#Breadcrumb ul{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+section#Breadcrumb ul>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+section#Breadcrumb ul>li.bread>a{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+section#Breadcrumb ul>li.bread>a:after{
+    content: url(../img/chevron.svg);
+    display: inline-table;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    bottom: 0;
+    width: 7px;
+    margin: auto 0px;
+}
+section#Breadcrumb ul>li.bread:last-child>a:after{
+  content: none;
+}
+section#Breadcrumb ul>li.bread:last-child>a{
+  pointer-events: none;
+}
+section#Breadcrumb ul>li.search{
+    float: right;
+    padding: 7px 0px;
+}
+section#Breadcrumb ul>li.search>input{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 200px;
+    border-radius: 5px;
+    border: 1.5px solid #645d9c;
+    background-color: #FFFFFF;
+    outline: none;
+    padding: 2px 10px;
+    font-size: 14px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #adadad;
+  font-size: 13px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #adadad;
+  font-size: 13px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #adadad;
+  font-size: 13px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #adadad;
+  font-size: 13px;
+}
+section#Breadcrumb ul>li.search>svg{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto 0px;
+    width: 15px;
+}
+section#Breadcrumb ul>li.search>svg path{
+  fill: #72649C;
+}
+
+
+
+/*SECCIONES*/
+section#slide{
+
+}
+section#slide img.logoW{
+  width: 150px;
+}
+section#slide h1{
+  line-height: 1.2;
+}
+
+
+section#EsquemasVenta{
+
+}
+section#EsquemasVenta div.item{
+
+}
+section#EsquemasVenta div.item>div{
+    width: 350px;
+}
+section#EsquemasVenta div.item>div>div.image{
+
+}
+section#EsquemasVenta div.item>div>div.image>img{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0px;
+}
+section#EsquemasVenta div.item>div>p {
+    height: 195px;
+}
+
+
+
+section.filtroProductos{
+
+}
+section.filtroProductos div.itemRound{
+
+}
+section.filtroProductos div.itemRound>div.circle{
+    width: 75px;
+    height: 75px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+section.filtroProductos div.itemRound>div.circle:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    float: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: transparent;
+    border: 3px solid #666;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all .75s ease;
+    -moz-transition: all .75s ease;
+    -ms-transition: all .75s ease;
+    -o-transition: all .75s ease;
+    transition: all .75s ease;
+}
+
+section.filtroProductos div.itemRound:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #666;
+    top: -30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+section.filtroProductos div.itemRound>div.circle svg{
+  display: inline-block;
+  position: absolute;
+  float: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 50%;
+  max-height: 50%;
+  margin: auto;
+}
+section.filtroProductos div.itemRound>div.circle svg path{
+  fill: #666666;
+  -webkit-transition: fill .35s ease;
+     -moz-transition: fill .35s ease;
+      -ms-transition: fill .35s ease;
+       -o-transition: fill .35s ease;
+          transition: fill .35s ease;
+}
+
+section.filtroProductos div.itemRound h4{
+  width: auto;
+  font-size: 14px;
+  color: #666666;
+  -webkit-transition: color .35s ease;
+     -moz-transition: color .35s ease;
+      -ms-transition: color .35s ease;
+       -o-transition: color .35s ease;
+          transition: color .35s ease;
+}
+section.filtroProductos div.itemRound h4>svg{
+    display: inline-block;
+    position: absolute;
+    float: left;
+    width: 13px;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0px;
+}
+section.filtroProductos div.itemRound h4>svg path{
+  fill: #666666;
+  -webkit-transition: fill .35s ease;
+     -moz-transition: fill .35s ease;
+      -ms-transition: fill .35s ease;
+       -o-transition: fill .35s ease;
+          transition: fill .35s ease;
+}
+section.filtroProductos div.itemRound.active h4>svg path{
+  fill: #696e9f;
+}
+
+section.filtroProductos div.itemRound h4>svg#Down{
+  display: inline-block;
+}
+section.filtroProductos div.itemRound h4>svg#Up{
+  display: none;
+}
+section.filtroProductos div.itemRound.active h4>svg#Down{
+  display: none;
+}
+section.filtroProductos div.itemRound.active h4>svg#Up{
+  display: inline-block;
+}
+
+
+section.filtroProductos div.itemRound:hover>div.circle{
+  border-color: #696e9f;
+  border-width: 1px;
+}
+section.filtroProductos div.itemRound:hover>div.circle:before{
+    top: -7px;
+    bottom: -7px;
+    left: -7px;
+    right: -7px;
+    opacity: .85;
+}
+section.filtroProductos div.itemRound:hover>div.circle svg path{
+  fill: #696e9f;
+}
+section.filtroProductos div.itemRound:hover h4>svg path{
+  fill: #696e9f;
+}
+section.filtroProductos div.itemRound:hover h4{
+  color: #696e9f;
+}
+
+section.filtroProductos div.slideProductos{
+
+}
+section.filtroProductos div.slideProductos div.slideGral{
+  outline: none;
+}
+
+section.filtroProductos div.containerBordered{
+    border: 2px solid #bcbed6;
+    border-radius: 15px;
+    padding: 25px 20px;
+}
+section.filtroProductos div.containerBordered div.slideCapacidad{
+
+}
+section.filtroProductos div.containerBordered div.slideCapacidad ul{
+    display: inline-block;
+    position: relative;
+    float: left;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+section.filtroProductos div.containerBordered div.slideCapacidad ul>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+section.filtroProductos div.containerBordered div.slideCapacidad ul>li>a{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: auto;
+    text-align: left;
+    color: #666666;
+    padding-left: 15px;
+}
+section.filtroProductos div.containerBordered div.slideCapacidad ul>li>a:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto 0px;
+    background-color: #d35500;
+    border-radius: 50%;
+}
+section.filtroProductos div.containerBordered div.call{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+section.filtroProductos div.containerBordered div.call a{
+  width: auto;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  padding: 15px 0px;
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+section.filtroProductos div.containerBordered div.call a>img{
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 30px;
+  top: -8px;
+}
+section.filtroProductos div.containerBordered div.call a:hover{
+  color: #7764a0;
+}
+
+
+
+
+
+section.filtroProductos div.slideProductos div.item{
+    padding: 30px 0px 0px 0px;
+}
+section.filtroProductos div.slideProductos div.item:before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  box-shadow: none;
+  -webkit-transition: all .45s ease;
+     -moz-transition: all .45s ease;
+      -ms-transition: all .45s ease;
+       -o-transition: all .45s ease;
+          transition: all .45s ease;
+}
+section.filtroProductos div.slideProductos div.item>div{
+  width: 265px;
+}
+section.filtroProductos div.slideProductos div.item>div div.image{
+  height: 400px;
+}
+section.filtroProductos div.slideProductos div.item>div div.image>img{
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    max-width: 85%;
+    max-height: 80%;
+    margin: 0px auto;
+}
+section.filtroProductos div.slideProductos div.item>div div.image>div.vertical>div>a{
+  pointer-events: none;
+  opacity: 0;
+  background-color: #ffffff;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.19), 0 1px 6px rgba(0,0,0,0.23);
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+section.filtroProductos div.slideProductos div.item>div div.image>div.vertical>div>a>img{
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    margin: auto;
+    -webkit-transition: all .95s ease;
+       -moz-transition: all .95s ease;
+        -ms-transition: all .95s ease;
+         -o-transition: all .95s ease;
+            transition: all .95s ease;
+}
+section.filtroProductos div.slideProductos div.item>div div.info{
+  
+}
+section.filtroProductos div.slideProductos div.item>div div.info>div.text{
+  
+}
+section.filtroProductos div.slideProductos div.item>div div.info>div.text:before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto 0px;
+  border: 1px dotted #DDD;
+}
+section.filtroProductos div.slideProductos div.item>div div.info>div.text>span{
+  display: inline-block;
+  position: relative;
+  background-color: #FFFFFF;
+}
+section.filtroProductos div.slideProductos div.item>div div.info>div.text>span:nth-child(1){
+    float: left;
+    text-align: left;
+    padding-right: 5px;
+}
+section.filtroProductos div.slideProductos div.item>div div.info>div.text>span:nth-child(2){
+  float: right;
+  text-align: right;
+  padding-left: 5px;
+}
+section.filtroProductos a.btnCotizar{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #696e9f;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px 15px;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+section.filtroProductos a.btnCotizar>span{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #FFFFFF;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+section.filtroProductos a.btnCotizar>svg{
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    width: 25px;
+    margin: auto 0px;
+}
+section.filtroProductos a.btnCotizar>svg path{
+  fill: #FFFFFF;
+  -webkit-transition: all .35s ease;
+     -moz-transition: all .35s ease;
+      -ms-transition: all .35s ease;
+       -o-transition: all .35s ease;
+          transition: all .35s ease;
+}
+
+section.filtroProductos a.btnCotizar:hover{
+  background-color: transparent;
+  border-color: #696e9f;
+}
+section.filtroProductos a.btnCotizar:hover>span{
+  color: #696e9f;
+}
+section.filtroProductos a.btnCotizar:hover>svg path{
+  fill: #696e9f;
+}
+section.filtroProductos div.slideProductos div.item:hover:before{
+  border-color: #DDDDDD;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+section.filtroProductos div.slideProductos div.item:hover>div div.image>div.vertical>div>a{
+  pointer-events: auto;
+  opacity: 1;
+}
+section.filtroProductos div.slideProductos div.item:hover>div div.image>div.vertical>div>a>img{
+  opacity: 1;
+}
+section.filtroProductos div.slideProductos div.item>div div.image>div.vertical>div>a:hover{
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.35), 0 1px 6px rgba(0,0,0,0.45);
+}
+section.filtroProductos div.paginacion{
+
+}
+section.filtroProductos div.paginacion>div{
+  width: auto;
+}
+section.filtroProductos div.paginacion>div>a{
+    display: inline-block;
+    position: relative;
+    background-color: #e3e6fc;
+    border-radius: 5px;
+    padding: 0px 10px;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section.filtroProductos div.paginacion>div>a>span{
+    display: inline-block;
+    position: relative;
+    padding: 6px 0px;
+}
+section.filtroProductos div.paginacion>div>a>svg{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0px;
+    width: 35px;
+}
+section.filtroProductos div.paginacion>div>a>svg>path{
+
+}
+section.filtroProductos div.paginacion>div>span{
+  padding: 10px 20px;
+  color: #696e9f;
+  font-weight: 500;
+  background-color: #e3e6fc;
+  border-radius: 5px;
+}
+section.filtroProductos div.paginacion>div>a.prev>svg{
+  left: 5px;
+}
+section.filtroProductos div.paginacion>div>a.prev>span{
+    padding-left: 50px;
+    color: #696e9f;
+}
+section.filtroProductos div.paginacion>div>a.next>svg{
+  right: 5px;
+}
+section.filtroProductos div.paginacion>div>a.next>span{
+    padding-right: 50px;
+    color: #696e9f;
+}
+section.filtroProductos div.paginacion>div>a:hover{
+  background-color: transparent;
+}
+
+
+
+section#footer{
+  background-color: #565b82;
+}
+section#footer img.logoFooter{
+  width: 105px;
+  float: left;
+}
+
+section#footer ul.contact{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+section#footer ul.contact>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 5px 0px;
+}
+section#footer ul.contact>li>svg{
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0px;
+    width: 20px;
+}
+section#footer ul.contact>li>svg path{
+    fill: #FFFFFF;
+}
+section#footer ul.contact>li>a{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0px 0px 0px 40px;
+    color: #FFFFFF;
+}
+section#footer ul.sucursales{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+section#footer ul.sucursales>li{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+section#footer ul.sucursales>li>a{
+    float: left;
+    width: 100%;
+    padding: 5px 0px;
+    color: #FFFFFF;
+}
+
+section#footer ul.social{
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+section#footer ul.social>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+section#footer ul.social>li>a{
+    float: left;
+    padding: 5px;
+}
+section#footer ul.social>li>a>svg{
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 42px;
+}
+section#footer ul.social>li>a>svg path{
+  fill: #FFFFFF;
+}
+
+
+
+section#footer a.security{
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 15px 0px;
+}
+section#footer a.security>svg{
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  margin: auto 0px;
+}
+section#footer a.security>svg path{
+  fill: #FFFFFF;
+}
+section#footer a.security>svg polygon{
+  fill: #FFFFFF;
+}
+
+section#footer a.security>span{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+section#footer a.top{
+    display: inline-block;
+    position: relative;
+    float: none;
+    margin: -33px auto auto 0px;
+    background-color: #565b82;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+section#footer a.top>svg{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    bottom: 0;
+    width: 100%;
+    max-width: 35%;
+    margin: auto;
+}
+section#footer a.top>svg path{
+    fill: #FFFFFF;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+section#footer a.top:hover>svg path{
+    fill: #fd3d00;
+}
+
+
+section#copyright{
+  padding: 10px 0px;
+  background-color: #343b63;
+}
+section#copyright p,
+section#copyright a{
+  color: #FFFFFF;
+  display: inline-block;
+  -webkit-transition: color .25s ease;
+     -moz-transition: color .25s ease;
+      -ms-transition: color .25s ease;
+       -o-transition: color .25s ease;
+          transition: color .25s ease;
+}
+section#copyright a:hover{
+  color: #ff8f0f;
+}
+
+@media (max-width : 1200px) {
+  section#EsquemasVenta div.item>div {
+      width: 300px;
+  }
+}
+
+@media (max-width : 991px) {
+  section#EsquemasVenta div.item>div {
+      width: 245px;
+  }
+  section.filtroProductos div.slideProductos div.item>div {
+      width: 245px;
+  }
+}
+
+@media (max-width : 768px) {
+  section#EsquemasVenta div.item>div {
+      width: 350px;
+  }
+  .reverse-xs{
+      display: inline-flex !important;
+      flex-direction: column-reverse !important;
+  }
+  .text-center-xs{
+      text-align: center;
+  }
+  section#EsquemasVenta div.item>div>p {
+      height: auto;
+  }
+  section#footer img.logoFooter{
+    float: none;
+  }
+  section.filtroProductos div.slideProductos div.item>div {
+      width: 270px;
+  }
+  section.filtroProductos div.itemRound:before {
+      top: 0px;
+  }
+  section.filtroProductos div.containerBordered div.call {
+      position: relative;
+  }
+  section.filtroProductos div.containerBordered div.call>div.vertical {
+      display: inline-block;
+      position: relative;
+      float: left;
+      padding: 40px 0px 0px 0px;
+  }
+}
+
+@media (max-width : 480px) {
+  section#EsquemasVenta div.item>div {
+      width: 100%;
+  }
+  section.filtroProductos div.paginacion>div>a{
+    display: block;
+  }
+}
+
+@media (max-width : 400px) {
+  section.filtroProductos div.itemRound>div.circle {
+      width: 65px;
+      height: 65px;
+  }
+}
