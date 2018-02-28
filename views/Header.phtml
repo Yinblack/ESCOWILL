@@ -16,8 +16,7 @@
 	<link href='assets/img/icon.png' rel='shortcut icon' type='image/png'>
 	<title><?php if(isset($this->titulo)) echo $this->titulo; ?></title>
 </head>
-<body>
-<div id="modalSuccess" data-izimodal-title="Muchas gracias por tu comentario" data-izimodal-subtitle="En unas horas aparecer en nuestra pagina."></div>
+<body id="body">
 
 <div class="loaderPage">
 	<div class="cSVG">
@@ -26,14 +25,17 @@
 </div>
 
 <section class="nopadding hidden-sm hidden-md hidden-lg" id="MenuHamburguer">
-	<button class="hamburger hamburger--collapse" type="button">
+	<a href="index" class="logo">
+		<img src="assets/img/logoTop.svg" alt="">
+	</a>
+	<button class="hamburger hamburger--arrow" type="button">
 	  <span class="hamburger-box">
 	    <span class="hamburger-inner"></span>
 	  </span>
 	</button>
 </section>
 
-<section class="firstSection" id="topSection">
+<section id="topSection">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 nopadding text-right">
@@ -70,6 +72,12 @@
 							<span>01 (55) 5649 8005</span>
 						</a>
 					</li>
+					<li class="hidden-lg hidden-md hidden-sm">
+						<a href="#">
+							<img src="assets/img/cart_pur.svg" alt="">
+							<span>(1)</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -79,14 +87,97 @@
 <section id="menu">
 	<div class="container">
 		<div class="row">
-			<ul class="principal">
+			<div class="col-xs-12 nopadding hidden-lg hidden-md hidden-sm">
+				<ul class="menuTabs">
+					<li>
+						<a href="menu" class="active">MENU</a>
+					</li>
+					<li>
+						<a href="cuenta">MI CUENTA</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="principal menu">
 				<li class="logo hidden-xs hidden-sm">
 					<a href="index">
 						<img src="assets/img/logoTop.svg" alt="">
 					</a>
 				</li>
 				<li class="hidden-xs">
-					<a href="Productos">PRODUCTOS</a>
+					<a href="productos">PRODUCTOS</a>
+					<ul class="subMenu">
+						<li>
+							<a href="#">BOTELLAS</a>
+							<ul>
+								<li>
+									<a href="#">1ml - 49 ml</a>
+								</li>
+								<li>
+									<a href="#">50 ml - 99 ml</a>
+								</li>
+								<li>
+									<a href="#">100 ml - 199 ml</a>
+								</li>
+								<li>
+									<a href="#">200 ml - 499 ml</a>
+								</li>
+								<li>
+									<a href="#">500 ml - 999 ml</a>
+								</li>
+								<li>
+									<a href="#">1000 ml - 1200 ml</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">TARROS</a>
+							<ul>
+								<li>
+									<a href="#">100 ml - 199 ml</a>
+								</li>
+								<li>
+									<a href="#">200 ml - 499 ml</a>
+								</li>
+								<li>
+									<a href="#">500 ml - 999 ml</a>
+								</li>
+								<li>
+									<a href="#">1000 ml - 1200 ml</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">TAPAS / ATOMIZADORES</a>
+							<ul>
+								<li>
+									<a href="#">50 ml - 99 ml</a>
+								</li>
+								<li>
+									<a href="#">100 ml - 199 ml</a>
+								</li>
+								<li>
+									<a href="#">200 ml - 499 ml</a>
+								</li>
+								<li>
+									<a href="#">500 ml - 999 ml</a>
+								</li>
+								<li>
+									<a href="#">1000 ml - 1200 ml</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">FORMA / FAMILIA</a>
+							<ul>
+								<li>
+									<a href="#">500 ml - 999 ml</a>
+								</li>
+								<li>
+									<a href="#">1000 ml - 1200 ml</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</li>
 				<li class="hidden-sm hidden-md hidden-lg">
 					<a href="#">BOTELLAS
@@ -110,7 +201,7 @@
 					</ul>
 				</li>
 				<li class="hidden-sm hidden-md hidden-lg">
-					<a href="Productos">TARROS
+					<a href="productos">TARROS
 						<svg class="inactive" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164 164" style="enable-background:new 0 0 164 164;" xml:space="preserve">
 							<path d="M32,84h48v48c0,1.1,0.9,2,2,2s2-0.9,2-2V84h48c1.1,0,2-0.9,2-2s-0.9-2-2-2H84V32c0-1.1-0.9-2-2-2s-2,0.9-2,2v48H32c-1.1,0-2,0.9-2,2S30.9,84,32,84z"/>
 							<path d="M162,0H2C0.9,0,0,0.9,0,2v160c0,1.1,0.9,2,2,2h160c1.1,0,2-0.9,2-2V2C164,0.9,163.1,0,162,0z M160,160H4V4h156V160z"/>
@@ -131,7 +222,7 @@
 					</ul>
 				</li>
 				<li class="hidden-sm hidden-md hidden-lg">
-					<a href="Productos">TAPAS / ATOMIZADORES
+					<a href="productos">TAPAS / ATOMIZADORES
 						<svg class="inactive" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164 164" style="enable-background:new 0 0 164 164;" xml:space="preserve">
 							<path d="M32,84h48v48c0,1.1,0.9,2,2,2s2-0.9,2-2V84h48c1.1,0,2-0.9,2-2s-0.9-2-2-2H84V32c0-1.1-0.9-2-2-2s-2,0.9-2,2v48H32c-1.1,0-2,0.9-2,2S30.9,84,32,84z"/>
 							<path d="M162,0H2C0.9,0,0,0.9,0,2v160c0,1.1,0.9,2,2,2h160c1.1,0,2-0.9,2-2V2C164,0.9,163.1,0,162,0z M160,160H4V4h156V160z"/>
@@ -152,7 +243,7 @@
 					</ul>
 				</li>
 				<li class="hidden-sm hidden-md hidden-lg">
-					<a href="Productos">FORMA / FAMILIA
+					<a href="productos">FORMA / FAMILIA
 						<svg class="inactive" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164 164" style="enable-background:new 0 0 164 164;" xml:space="preserve">
 							<path d="M32,84h48v48c0,1.1,0.9,2,2,2s2-0.9,2-2V84h48c1.1,0,2-0.9,2-2s-0.9-2-2-2H84V32c0-1.1-0.9-2-2-2s-2,0.9-2,2v48H32c-1.1,0-2,0.9-2,2S30.9,84,32,84z"/>
 							<path d="M162,0H2C0.9,0,0,0.9,0,2v160c0,1.1,0.9,2,2,2h160c1.1,0,2-0.9,2-2V2C164,0.9,163.1,0,162,0z M160,160H4V4h156V160z"/>
@@ -193,6 +284,19 @@
 					<a href="#">
 						<img src="assets/img/cart.svg" alt="">
 						<span>(1)</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="principal cuenta hidden-lg hidden-md hidden-sm">
+				<li>
+					<a href="#">REGISTRARSE</a>
+				</li>
+				<li>
+					<a href="#">ENTRAR</a>
+				</li>
+				<li class="carrito">
+					<a href="#">
+						<img src="assets/img/cart_grey.svg" alt=""> (1)
 					</a>
 				</li>
 			</ul>

@@ -95,7 +95,9 @@ h5{
 .textPurppleDark{
     color: #7764a0;
 }
-
+.textPurppleShin{
+    color: #455cc7;
+}
 @media (max-width : 1200px) {
 
 }

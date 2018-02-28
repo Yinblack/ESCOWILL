@@ -85,10 +85,10 @@ section#Breadcrumb ul>li.bread>a:after{
     width: 7px;
     margin: auto 0px;
 }
-section#Breadcrumb ul>li.bread:last-child>a:after{
+section#Breadcrumb ul>li.bread:nth-last-child(-n+2)>a:after{
   content: none;
 }
-section#Breadcrumb ul>li.bread:last-child>a{
+section#Breadcrumb ul>li.bread:nth-last-child(-n+2)>a{
   pointer-events: none;
 }
 section#Breadcrumb ul>li.search{
@@ -106,6 +106,15 @@ section#Breadcrumb ul>li.search>input{
     outline: none;
     padding: 2px 10px;
     font-size: 14px;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#Breadcrumb ul>li.search>input:focus,
+section#Breadcrumb ul>li.search>input:active{
+    border-color: #ff8300;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #adadad;
@@ -205,7 +214,7 @@ section.filtroProductos div.itemRound>div.circle:before{
     right: 0;
     margin: auto;
     background-color: transparent;
-    border: 3px solid #666;
+    border: 3px solid #696e9f;
     border-radius: 50%;
     opacity: 0;
     -webkit-transition: all .75s ease;
@@ -227,6 +236,19 @@ section.filtroProductos div.itemRound:before{
     left: 0;
     right: 0;
     margin: auto;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+section.filtroProductos div.itemRound>div.circle>div.vertical{
+  z-index: 2;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
 }
 section.filtroProductos div.itemRound>div.circle svg{
   display: inline-block;
@@ -296,24 +318,39 @@ section.filtroProductos div.itemRound.active h4>svg#Up{
 }
 
 
-section.filtroProductos div.itemRound:hover>div.circle{
+section.filtroProductos div.itemRound:hover>div.circle,
+section.filtroProductos div.itemRound.active>div.circle{
   border-color: #696e9f;
   border-width: 1px;
 }
-section.filtroProductos div.itemRound:hover>div.circle:before{
+section.filtroProductos div.itemRound:hover>div.circle:before,
+section.filtroProductos div.itemRound.active>div.circle:before{
     top: -7px;
     bottom: -7px;
     left: -7px;
     right: -7px;
     opacity: .85;
+    z-index: 1;
+    background-color: #FFFFFF;
 }
-section.filtroProductos div.itemRound:hover>div.circle svg path{
+section.filtroProductos div.itemRound:hover>div.circle>div.vertical,
+section.filtroProductos div.itemRound.active>div.circle>div.vertical{
+    border: 1px solid #7f83ad;
+    border-radius: 50%;
+}
+section.filtroProductos div.itemRound:hover>div.circle svg path,
+section.filtroProductos div.itemRound.active>div.circle svg path
+{
   fill: #696e9f;
 }
-section.filtroProductos div.itemRound:hover h4>svg path{
+section.filtroProductos div.itemRound:hover h4>svg path,
+section.filtroProductos div.itemRound.active h4>svg path
+{
   fill: #696e9f;
 }
-section.filtroProductos div.itemRound:hover h4{
+section.filtroProductos div.itemRound:hover h4,
+section.filtroProductos div.itemRound.active h4
+{
   color: #696e9f;
 }
 
@@ -324,15 +361,45 @@ section.filtroProductos div.slideProductos div.slideGral{
   outline: none;
 }
 
+
+section.filtroProductos div.slideCategorias{
+
+}
+section.filtroProductos div.slideCategorias div.item{
+  display: none;
+}
+
+
 section.filtroProductos div.containerBordered{
     border: 2px solid #bcbed6;
     border-radius: 15px;
     padding: 25px 20px;
 }
-section.filtroProductos div.containerBordered div.slideCapacidad{
-
+section.filtroProductos div.containerBordered a.closeAcc{
+  display: inline-block;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  opacity: .75;
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
 }
-section.filtroProductos div.containerBordered div.slideCapacidad ul{
+section.filtroProductos div.containerBordered a.closeAcc:hover{
+  opacity: 1;
+}
+section.filtroProductos div.containerBordered a.closeAcc>img{
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+section.filtroProductos div.containerBordered ul{
     display: inline-block;
     position: relative;
     float: left;
@@ -343,13 +410,13 @@ section.filtroProductos div.containerBordered div.slideCapacidad ul{
     -webkit-margin-end: 0;
     -webkit-padding-start: 0;
 }
-section.filtroProductos div.containerBordered div.slideCapacidad ul>li{
+section.filtroProductos div.containerBordered ul>li{
     display: inline-block;
     position: relative;
     float: left;
     width: 100%;
 }
-section.filtroProductos div.containerBordered div.slideCapacidad ul>li>a{
+section.filtroProductos div.containerBordered ul>li>a{
     display: inline-block;
     position: relative;
     float: left;
@@ -358,7 +425,7 @@ section.filtroProductos div.containerBordered div.slideCapacidad ul>li>a{
     color: #666666;
     padding-left: 15px;
 }
-section.filtroProductos div.containerBordered div.slideCapacidad ul>li>a:before{
+section.filtroProductos div.containerBordered ul>li>a:before{
     content: '';
     display: inline-block;
     position: absolute;
@@ -636,6 +703,243 @@ section.filtroProductos div.paginacion>div>a:hover{
 
 
 
+/*DETALLE PRODUCTO*/
+section#detalle div.slideDetalleZoom div.item{
+  height: 575px;
+  outline: none;
+}
+section#detalle div.slideDetalleZoom div.item>img{
+    display: inline-block;
+    position: absolute;
+    max-width: 85%;
+    max-height: 85%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+section#detalle div.slideDetalleThumbs div.item{
+  height: 200px;
+  outline: none;
+}
+section#detalle div.slideDetalleThumbs div.item>img{
+    display: inline-block;
+    position: absolute;
+    max-width: 90%;
+    max-height: 75%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#detalle div.slideDetalleThumbs div.item>img:hover{
+    opacity: .75;
+}
+section#detalle div.slideDetalleZoom .slick-prev, 
+section#detalle div.slideDetalleZoom .slick-next, 
+section#detalle div.slideDetalleThumbs .slick-prev, 
+section#detalle div.slideDetalleThumbs .slick-next{
+  width: 35px;
+  height: 35px;
+}
+section#detalle div.slideDetalleZoom .slick-next:before,
+section#detalle div.slideDetalleThumbs .slick-next:before{
+  content: url('../img/arrow_purple_next.svg');
+}
+section#detalle div.slideDetalleZoom .slick-prev:before,
+section#detalle div.slideDetalleThumbs .slick-prev:before{
+  content: url('../img/arrow_purple_prev.svg');
+}
+section#detalle div.info span.spanStock{
+    background-color: #ff8300;
+    color: #FFFFFF;
+    padding: 2px 15px;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+section#detalle div.info div.text{
+  
+}
+section#detalle div.info div.text:before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto 0px;
+  border: 1px dotted #DDD;
+}
+section#detalle div.info div.text>span{
+  display: inline-block;
+  position: relative;
+  background-color: #FFFFFF;
+}
+section#detalle div.info div.text>span:nth-child(1){
+    float: left;
+    text-align: left;
+    padding-right: 5px;
+}
+section#detalle div.info div.text>span:nth-child(2){
+  float: right;
+  text-align: right;
+  padding-left: 5px;
+}
+section#detalle div.info a.btnCotizar{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 175px;
+    background-color: #696e9f;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px 15px;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+section#detalle div.info a.btnCotizar>span{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #FFFFFF;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+section#detalle div.info a.btnCotizar>svg{
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    width: 25px;
+    margin: auto 0px;
+}
+section#detalle div.info a.btnCotizar>svg path{
+  fill: #FFFFFF;
+  -webkit-transition: all .35s ease;
+     -moz-transition: all .35s ease;
+      -ms-transition: all .35s ease;
+       -o-transition: all .35s ease;
+          transition: all .35s ease;
+}
+
+section#detalle div.info a.btnCotizar:hover{
+  background-color: transparent;
+  border-color: #696e9f;
+}
+section#detalle div.info a.btnCotizar:hover>span{
+  color: #696e9f;
+}
+section#detalle div.info a.btnCotizar:hover>svg path{
+  fill: #696e9f;
+}
+section#detalle div.info ul.share{
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+section#detalle div.info ul.share>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+section#detalle div.info ul.share>li>a{
+    float: left;
+    padding: 5px;
+}
+section#detalle div.info ul.share>li>a>svg{
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 42px;
+}
+section#detalle div.info ul.share>li>a>svg path{
+  fill: #565b82;
+}
+
+section#tapasSugeridas{
+  
+}
+section#tapasSugeridas div.grayContainer{
+    background-color: rgba(153, 153, 154, 0.5);
+    border-radius: 5px;
+}
+section#tapasSugeridas div.grayContainer>div.item{
+  padding: 15px 0px;
+}
+section#tapasSugeridas div.grayContainer>div.item>div{
+    width: 135px;
+}
+section#tapasSugeridas div.grayContainer>div.item>div>div.image{
+  height: 150px;
+}
+section#tapasSugeridas div.grayContainer>div.item>div>div.image>img{
+    display: inline-block;
+    position: absolute;
+    max-width: 95%;
+    max-height: 95%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+section#tapasSugeridas div.grayContainer>div.item>div a.addToCart{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #696e9f;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#tapasSugeridas div.grayContainer>div.item>div a.addToCart>img{
+    display: inline-block;
+    position: absolute;
+    max-width: 60%;
+    max-height: 60%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+section#tapasSugeridas div.grayContainer>div.item>div a.addToCart:hover{
+  background-color: #455cc7;
+}
+
+
+
 section#footer{
   background-color: #565b82;
 }
@@ -682,6 +986,14 @@ section#footer ul.contact>li>a{
     width: 100%;
     padding: 0px 0px 0px 40px;
     color: #FFFFFF;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#footer ul.contact>li>a:hover{
+  color: #a7b5f2;
 }
 section#footer ul.sucursales{
     display: inline-block;
@@ -705,8 +1017,15 @@ section#footer ul.sucursales>li>a{
     width: 100%;
     padding: 5px 0px;
     color: #FFFFFF;
+    -webkit-transition: color .25s ease;
+       -moz-transition: color .25s ease;
+        -ms-transition: color .25s ease;
+         -o-transition: color .25s ease;
+            transition: color .25s ease;
 }
-
+section#footer ul.sucursales>li>a:hover{
+  color: #a7b5f2;
+}
 section#footer ul.social{
     display: inline-block;
     position: relative;
@@ -734,8 +1053,15 @@ section#footer ul.social>li>a>svg{
 }
 section#footer ul.social>li>a>svg path{
   fill: #FFFFFF;
+  -webkit-transition: fill .25s ease;
+     -moz-transition: fill .25s ease;
+      -ms-transition: fill .25s ease;
+       -o-transition: fill .25s ease;
+          transition: fill .25s ease;
 }
-
+section#footer ul.social>li>a:hover>svg path{
+  fill: #a7b5f2;
+}
 
 
 section#footer a.security{
@@ -769,6 +1095,14 @@ section#footer a.security>span{
     padding-left: 15px;
     font-size: 14px;
     color: #FFFFFF;
+    -webkit-transition: color .25s ease;
+       -moz-transition: color .25s ease;
+        -ms-transition: color .25s ease;
+         -o-transition: color .25s ease;
+            transition: color .25s ease;
+}
+section#footer a.security:hover>span{
+  color: #a7b5f2;
 }
 section#footer a.top{
     display: inline-block;
@@ -831,6 +1165,9 @@ section#copyright a:hover{
   section#EsquemasVenta div.item>div {
       width: 300px;
   }
+  section#tapasSugeridas div.grayContainer>div.item>div {
+      width: 110px;
+  }
 }
 
 @media (max-width : 991px) {
@@ -839,6 +1176,13 @@ section#copyright a:hover{
   }
   section.filtroProductos div.slideProductos div.item>div {
       width: 245px;
+  }
+  section#tapasSugeridas div.grayContainer>div.item {
+      width: 50%;
+  }
+  section#tapasSugeridas div.grayContainer>div.item>div {
+      width: 150px;
+      border: 1px solid #DDD;
   }
 }
 
@@ -874,6 +1218,17 @@ section#copyright a:hover{
       float: left;
       padding: 40px 0px 0px 0px;
   }
+  section#Breadcrumb ul>li.search {
+    float: left;
+    padding: 0px;
+    width: 100%;
+  }
+  section#Breadcrumb ul>li.search>input {
+    width: 100%;
+  }
+  section#tapasSugeridas div.grayContainer>div.item {
+      width: 25%;
+  }
 }
 
 @media (max-width : 480px) {
@@ -883,11 +1238,26 @@ section#copyright a:hover{
   section.filtroProductos div.paginacion>div>a{
     display: block;
   }
+  section#detalle div.slideDetalleZoom div.item {
+      height: 500px;
+  }
+}
+
+@media (max-width : 680px) {
+  section#tapasSugeridas div.grayContainer>div.item {
+      width: 50%;
+  }
+  section.filtroProductos div.slideProductos div.item>div {
+      width: 270px;
+  }
 }
 
 @media (max-width : 400px) {
   section.filtroProductos div.itemRound>div.circle {
       width: 65px;
       height: 65px;
+  }
+  section#tapasSugeridas div.grayContainer>div.item>div {
+      width: 130px;
   }
 }

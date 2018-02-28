@@ -13,11 +13,19 @@ class ControllerRoutes extends Controller
         $this->_view->renderizar('Footer');
     }
 
-    public function Productos()
+    public function productos()
     {
-        $this->_view->titulo = 'ESCOWILL | ENVASES PET';
+        $this->_view->titulo = 'ESCOWILL | PRODUCTOS';
         $this->_view->renderizar('Header');
         $this->_view->renderizar('Productos');
+        $this->_view->renderizar('Footer');
+    }
+
+    public function detalle()
+    {
+        $this->_view->titulo = 'ESCOWILL | DETALLE PRODUCTO';
+        $this->_view->renderizar('Header');
+        $this->_view->renderizar('Detalle');
         $this->_view->renderizar('Footer');
     }
 

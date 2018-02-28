@@ -297,7 +297,6 @@ section#menu ul.principal>li>a{
     font-size: 14px;
     font-weight: 400;
 }
-
 section#menu ul.principal>li>a:after{
     content: '';
     display: inline-block;
@@ -357,7 +356,6 @@ section#menu ul.principal>li.cart:after{
     height: 30px;
     width: 4px;
 }
-
 section#menu ul.principal>li.logo{
     float: left;
 }
@@ -370,19 +368,181 @@ section#menu ul.principal>li.logo>a>img{
     float: left;
     width: 175px;
 }
+section#menu ul.menuTabs{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+section#menu ul.menuTabs>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: auto;
+}
+section#menu ul.menuTabs>li>a{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: auto;
+    padding: 20px 40px;
+    background-color: #ededed;
+    color: #666666;
+    line-height: 1;
+    border-width: 0px 1px 1px 0px;
+    border-color: #DDD;
+    border-style: solid;
+}
+section#menu ul.menuTabs>li>a.active{
+    background-color: #FFFFFF;
+    border-bottom: 0px;
+}
+
+/*SUBMENU LVL1*/
+section#menu ul.principal>li>ul.subMenu{
+    display: none;
+    position: absolute;
+    float: left;
+    top: 100%;
+    left: 0;
+    width: 210px;
+    background-color: #FFFFFF;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+    padding: 0px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#menu ul.principal>li:hover>ul.subMenu{
+    display: inline-block;
+}
+section#menu ul.principal>li>ul.subMenu>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+section#menu ul.principal>li>ul.subMenu>li>a{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 3px 15px;
+    text-align: left;
+    color: #49669e;
+    font-size: 15px;
+    font-weight: 100;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#menu ul.principal>li>ul.subMenu>li:first-child>a{
+    padding-top: 10px;
+}
+section#menu ul.principal>li>ul.subMenu>li:last-child>a{
+    padding-bottom: 10px;
+}
+section#menu ul.principal>li>ul.subMenu>li:hover>a{
+    color: #455cc7;
+    background-color: #efefef;
+}
+/*SUBMENU LVL2*/
+section#menu ul.principal>li>ul.subMenu>li>ul{
+    display: none;
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 100%;
+    width: 210px;
+    background-color: #FFFFFF;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+    padding: 0px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#menu ul.principal>li>ul.subMenu>li:hover>ul{
+    display: inline-block;
+}
+section#menu ul.principal>li>ul.subMenu>li>ul>li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+section#menu ul.principal>li>ul.subMenu>li>ul>li:first-child>a{
+    padding-top: 10px;
+}
+section#menu ul.principal>li>ul.subMenu>li>ul>li:last-child>a{
+    padding-bottom: 10px;
+}
+section#menu ul.principal>li>ul.subMenu>li>ul>li>a{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 3px 15px;
+    text-align: left;
+    color: #777;
+    font-size: 15px;
+    font-weight: 100;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+section#menu ul.principal>li>ul.subMenu>li>ul>li:hover>a{
+    color: #455cc7;
+    background-color: #efefef;
+}
 
 
 /*MENU*/
 
 /*HAMBURGUER*/
 section#MenuHamburguer{
-    background-color: transparent;
+    background-color: #ff8300;
     display: inline-block;
     position: fixed;
     z-index: 5;
-    top: 0;
-    width: auto;
-    right: 0;
+    top: 41px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -webkit-transition: top .45s ease;
+       -moz-transition: top .45s ease;
+        -ms-transition: top .45s ease;
+         -o-transition: top .45s ease;
+            transition: top .45s ease;
+}
+section#MenuHamburguer.fix{
+    top: 0px;
 }
 section#MenuHamburguer>button.hamburger{
     display: inline-block;
@@ -396,7 +556,19 @@ section#MenuHamburguer>button.hamburger{
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
     background-color: #ffffff;
 }
-
+section#MenuHamburguer a.logo{
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+section#MenuHamburguer a.logo>img{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 175px;
+    height: auto;
+    padding: 15px 15px;
+}
 /*ANIMATION*/
 .bounce {
     -moz-animation: bounce 3s infinite;
@@ -533,29 +705,32 @@ label.error{
     }
     /*MENU*/
     section#menu {
-        top: 0px;
-        overflow-x: hidden;
-        position: fixed;
-        z-index: 5;
-        width: 100%;
-        left: -100%;
-        background-color: transparent;
-        box-shadow: none;
-        -webkit-transition: all .45s ease;
-           -moz-transition: all .45s ease;
-            -ms-transition: all .45s ease;
-             -o-transition: all .45s ease;
-                transition: all .45s ease;
-        pointer-events: none;
+    top: 0px;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    left: -100%;
+    background-color: transparent;
+    box-shadow: none;
+    pointer-events: none;
+    -webkit-transition: all .45s ease;
+    -moz-transition: all .45s ease;
+    -ms-transition: all .45s ease;
+    -o-transition: all .45s ease;
+    transition: all .45s ease;
     }
     section#menu ul.principal {
         padding: 15px 0px;
-        background-color: #FFFFFF;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         pointer-events: auto;
         max-height: 100vh;
         overflow-y: auto;
         height: 100vh;
+    }
+    section#menu .row{
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        pointer-events: auto;
     }
     section#menu ul.principal>li{
         float: left;
@@ -611,6 +786,20 @@ label.error{
     }
     section#menu ul.principal>li>a>svg path{
         fill: #666666;
+    }
+    section#menu ul.principal>li.carrito>a{
+        padding: 5px 0px;
+        font-size: 20px;
+        line-height: 1.7;
+    }
+    section#menu ul.principal>li.carrito>a:before{
+        content: none;
+    }
+    section#menu ul.principal>li.carrito>a>img{
+        display: inline-block;
+        position: relative;
+        float: left;
+        width: 35px;
     }
     section#menu ul.principal>li>ul{
     display: none;
@@ -668,9 +857,10 @@ label.error{
     section#menu>div.container{
         padding: 0px;
         padding-right: 70px;
+        pointer-events: none;
     }
     .firstSection{
-        margin-top: 67.75px;
+        margin-top: 66px;
     }
 }
 
